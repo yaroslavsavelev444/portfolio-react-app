@@ -1,0 +1,19 @@
+.skills-list {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.skill {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.skills{
+  margin: 2% 0;
+}

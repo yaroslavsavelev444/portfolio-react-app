@@ -1,0 +1,167 @@
+.projects {
+  text-align: center;
+  background: black;
+  color: white;
+  margin: 2% 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.projects-slider {
+  overflow: visible;
+  width: 80%;
+  margin: auto;
+}
+.slide {
+  padding: 20px;
+  overflow: visible;
+  display: flex; /* Добавим flexbox для выравнивания */
+  justify-content: center;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Равномерное распределение */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  border: 2px solid transparent;
+  position: relative;
+  min-height: 400px; /* Увеличиваем высоту */
+  margin: 20px;
+}
+
+
+
+.project-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.project-tech {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.project-link {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 25px;
+}
+
+.project-image, 
+.project-placeholder {
+  width: 100%;
+  height: 250px; /* Увеличиваем, чтобы было как у фото */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-status{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+.project-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ddd;
+  background: black; /* Красный фон */
+  width: 100%;
+  height: 250px; /* Фиксированная высота */
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Упрощенные стили для точек навигации */
+.slick-prev,
+.slick-next {
+  background: none;
+  border: none;
+  color: #fff; /* Белый цвет стрелок */
+  font-size: 30px; /* Размер стрелок */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.slick-prev {
+  left: 10px; /* Расстояние от левого края */
+}
+
+.slick-next {
+  right: 10px; /* Расстояние от правого края */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  content: '';
+  display: none;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  color: #00bfff; /* Цвет стрелок при наведении */
+}
+
+
+.project-card.dev {
+  animation: glowing-border 3s infinite;
+  .slick-arrow {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  
+  .slick-prev {
+    left: -40px;
+  }
+  
+  .slick-next {
+    right: -40px;
+  }
+  
+  .slick-prev:hover,
+  .slick-next:hover {
+    color: #00bfff;
+  }
+}
