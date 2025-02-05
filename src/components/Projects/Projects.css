@@ -16,27 +16,26 @@
   width: 80%;
   margin: auto;
 }
+
 .slide {
   padding: 20px;
-  overflow: visible;
-  display: flex; /* Добавим flexbox для выравнивания */
+  display: flex;
   justify-content: center;
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Равномерное распределение */
+  justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   padding: 20px;
   border: 2px solid transparent;
   position: relative;
-  min-height: 400px; /* Увеличиваем высоту */
+  min-height: 350px; /* Уменьшена высота */
   margin: 20px;
+  max-width: max-content;
 }
-
-
 
 .project-title {
   font-size: 1.4rem;
@@ -74,7 +73,7 @@
 .project-image, 
 .project-placeholder {
   width: 100%;
-  height: 250px; /* Увеличиваем, чтобы было как у фото */
+  height: 250px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 15px;
@@ -90,6 +89,7 @@
   margin: 0;
   padding: 0;
 }
+
 .project-placeholder {
   display: flex;
   align-items: center;
@@ -97,20 +97,19 @@
   font-weight: bold;
   font-size: 1.2rem;
   color: #ddd;
-  background: black; /* Красный фон */
+  background: black;
   width: 100%;
-  height: 250px; /* Фиксированная высота */
+  height: 250px;
   border-radius: 10px;
   margin-bottom: 15px;
 }
 
-/* Упрощенные стили для точек навигации */
 .slick-prev,
 .slick-next {
   background: none;
   border: none;
-  color: #fff; /* Белый цвет стрелок */
-  font-size: 30px; /* Размер стрелок */
+  color: #fff;
+  font-size: 30px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -119,11 +118,11 @@
 }
 
 .slick-prev {
-  left: 10px; /* Расстояние от левого края */
+  left: 10px;
 }
 
 .slick-next {
-  right: 10px; /* Расстояние от правого края */
+  right: 10px;
 }
 
 .slick-prev:before,
@@ -134,34 +133,58 @@
 
 .slick-prev:hover,
 .slick-next:hover {
-  color: #00bfff; /* Цвет стрелок при наведении */
+  color: #00bfff;
 }
 
+/* Адаптивные стили */
+@media (max-width: 1024px) {
+  .projects-slider {
+    width: 90%;
+  }
+}
 
-.project-card.dev {
-  animation: glowing-border 3s infinite;
-  .slick-arrow {
-    background: none;
-    border: none;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
+@media (max-width: 768px) {
+  .project-card {
+    min-height: 300px;
+     width: 80%; /* Уменьшена ширина */  
+     max-width: 300px
   }
-  
-  .slick-prev {
-    left: -40px;
+
+  .project-title {
+    font-size: 1.2rem;
   }
-  
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .slick-prev,
   .slick-next {
-    right: -40px;
+    font-size: 25px;
   }
-  
-  .slick-prev:hover,
-  .slick-next:hover {
-    color: #00bfff;
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    min-height: 280px; /* Еще меньше для мобильных устройств */
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 0.8rem;
+  }
+
+  .slick-prev,
+  .slick-next {
+    font-size: 20px;
+  }
+  .project-image, 
+  .project-placeholder {
+    height: 180px; /* Уменьшена высота для мобильных */
   }
 }

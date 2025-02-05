@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaLink } from "react-icons/fa"; 
 import "./Projects.css";
+
 const CustomPrevArrow = (props) => {
   const { className, style, onClick } = props;
   return (
@@ -17,6 +18,7 @@ const CustomPrevArrow = (props) => {
     </button>
   );
 };
+
 const CustomNextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
@@ -29,6 +31,7 @@ const CustomNextArrow = (props) => {
     </button>
   );
 };
+
 const Projects = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -41,6 +44,26 @@ const Projects = () => {
     beforeChange: (_, next) => setActiveIndex(next),
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
+    responsive: [
+      {
+        breakpoint: 1024, // для больших экранов (ноутбуки и десктопы)
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768, // для планшетов
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480, // для мобильных
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -53,7 +76,7 @@ const Projects = () => {
               className={`project-card ${project.status === "dev" ? "dev" : ""}`}
               style={{
                 borderColor: index === activeIndex ? project.color : "transparent",
-                borderWidth: index === activeIndex ? ".5px" : "0px", // Толщина границы
+                borderWidth: index === activeIndex ? ".5px" : "0px",
                 minHeight: "400px",
               }}
             >
@@ -86,11 +109,11 @@ const Projects = () => {
                   ))}
                 </div>
               )}
-           {project.status !== 'dev' && (
+              {project.status !== 'dev' && (
                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
                 <FaLink />
               </a>
-            )}
+              )}
             </div>
           </div>
         ))}

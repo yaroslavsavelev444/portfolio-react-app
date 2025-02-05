@@ -17,3 +17,8 @@
 .skills{
   margin: 2% 0;
 }
+@media (max-width: 768px) {
+  .skills{
+    margin: 10% 0;
+  }
+}

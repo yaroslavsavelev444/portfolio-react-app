@@ -1,3 +1,8 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /src/  # Не индексировать папку src
+Disallow: /private/  # Не индексировать приватные папки
+
+# Разрешить индексацию всего остального
+Allow: /
+
+Sitemap: https://yourdomain.com/sitemap.xml  # Укажите путь к вашему sitemap

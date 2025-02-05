@@ -17,7 +17,12 @@
   opacity: 0; /* Прячем полностью */
   pointer-events: none; /* Отключаем кликабельность */
   transform: translateY(-100%); /* Сдвигаем наверх */
-  transition: opacity 0.3s, transform 0.3s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.header:not(.hidden) {
+  opacity: 1; /* Видимость */
+  transform: translateY(0); /* Вертикальное позиционирование */
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .header.scrolled {

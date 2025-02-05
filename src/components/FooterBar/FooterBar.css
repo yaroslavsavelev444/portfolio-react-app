@@ -1,5 +1,6 @@
 .footer {
-    background-color: #333;
+  background: rgba(24, 24, 24, 0.8); /* Полупрозрачный фон при прокрутке */
+
     color: #fff;
     text-align: center;
     padding: 1rem 0;

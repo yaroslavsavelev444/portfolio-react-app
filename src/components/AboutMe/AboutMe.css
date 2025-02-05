@@ -82,3 +82,24 @@ h2 {
   margin-top: 0;
   text-align: start;
 }
+
+@media (max-width: 768px) {
+  .App {
+    font-size: 14px; /* Меньше шрифт */
+  }
+
+  .about {
+    width: 80%;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .about-wrapper{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .about-list li, .about-text{
+    font-size: 1.3rem;
+  }
+}

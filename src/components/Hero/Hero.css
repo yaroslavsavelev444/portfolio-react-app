@@ -51,3 +51,10 @@
 .hero-button:hover {
   background-color: #555;
 }
+
+
+.hero-title-skeleton,
+.hero-description-skeleton,
+.hero-button-skeleton {
+  margin: 1rem auto;
+}
